@@ -153,6 +153,9 @@ body {
   }
 }
 
+
+
+
 // HEADER // HEADER // HEADER // HEADER
 
 // MAIN // MAIN // MAIN // MAIN // MAIN
@@ -285,6 +288,11 @@ body {
   .main__items{
     flex-wrap: wrap;
     row-gap: 50px;
+  }
+}
+@media (max-width:485.98px) {
+  .main{
+    padding-top: 250px;
   }
 }
 
