@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+/* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */
+/* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+img {
+    vertical-align: top;
+}
+html,
+body {
+    height: 100%;
+}
+html {
+    font-size: 16px; /* по умолчанию */
+}
+body {
+    line-height: 1;
+    font-family: "Roboto";
+    background: #F5F5F5;
+    /* background: #f5f5f5; */
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */
+/* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */ /* ОБНУЛЯЮЩИЙ СТИЛЬ */
+
+[class*="__container"] {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main {
+
+    // .main__items
+
+    &__items {
+    }
+
+    // .main__item
+
+    &__item {
+    }
+}
+.item-main {
+    padding: 15px;
+    transform: translate(-100%,0);
+    transform: 0.3;
+    @for $var from 1 to 5{
+        $delay: 0.1 * $var;
+        &:nth-child($var){
+            transition-delay: $delay + s;
+        }
+    }
+}
+
+.main__items:hover .item-main{
+    transform: translate(0px,0px);
+    background-color: red;
+}
